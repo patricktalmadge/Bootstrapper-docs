@@ -66,7 +66,7 @@ set_exception_handler(function($e)
 	Exception\Handler::make($e)->handle();
 });
 
-set_error_handler(function($number, $error, $file, $line) 
+set_error_handler(function($number, $error, $file, $line)
 {
 	require_once SYS_PATH.'exception/handler'.EXT;
 	require_once SYS_PATH.'exception/examiner'.EXT;
@@ -77,7 +77,8 @@ set_error_handler(function($number, $error, $file, $line)
 
 register_shutdown_function(function()
 {
-	if ( ! is_null($error = error_get_last()))
+	$error = error_get_last();
+	if ( ! is_null($error) && $error['type'] != 8192)
 	{
 		require_once SYS_PATH.'exception/handler'.EXT;
 		require_once SYS_PATH.'exception/examiner'.EXT;
@@ -86,7 +87,7 @@ register_shutdown_function(function()
 		extract($error);
 
 		Exception\Handler::make(new \ErrorException($message, $type, 0, $file, $line))->handle();
-	}	
+	}
 });
 
 // --------------------------------------------------------------
