@@ -14,7 +14,7 @@ return array(
 	|
 	*/
 
-	'default' => 'sqlite',
+	'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,10 +52,10 @@ return array(
 
 		'mysql' => array(
 			'driver'   => 'mysql',
-			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
-			'password' => 'password',
+			'host'     => 'DBHOST',
+			'database' => 'DBNAME',
+			'username' => 'DBUSER',
+			'password' => 'DBPASS',
 			'charset'  => 'utf8',
 		),
 
