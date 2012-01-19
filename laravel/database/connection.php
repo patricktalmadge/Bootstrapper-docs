@@ -158,6 +158,8 @@ class Connection {
 			if ($value instanceof Expression) unset($bindings[$key]);
 		}
 
+		$bindings = array_values($bindings);
+
 		$sql = $this->transform($sql, $bindings);
 
 		$this->queries[] = compact('sql', 'bindings');
@@ -202,7 +204,7 @@ class Connection {
 	 * Execute a prepared PDO statement and return the appropriate results.
 	 *
 	 * @param  PDOStatement  $statement
-	 * @param  array         $results
+	 * @param  array         $bindings
 	 * @return mixed
 	 */
 	protected function execute(PDOStatement $statement, $bindings)

@@ -1,5 +1,53 @@
 # Laravel Change Log
 
+## Version 2.1.0
+
+- Fix: Multiple wildcards / regular expressions per segment are now supported.
+
+### Upgrading from 2.0.9
+
+- Replace **laravel** directory.
+
+## Version 2.0.9
+
+- Minor: Made "timestamps" method in Eloquent model protected instead of private.
+- Fix: Authentication cookies are not deleted properly when custom domains or paths are used.
+
+### Upgrading from 2.0.8
+
+- Replace **laravel** directory.
+
+## Version 2.0.8
+
+- Fix: Limited URI segments to 20 to protect against DDoS.
+
+### Upgrading from 2.0.7
+
+- Replace **laravel** directory.
+
+## Version 2.0.7
+
+- Fix: Fixed raw_where in query builder.
+
+### Upgrading from 2.0.6
+
+- Replace **laravel** directory.
+
+## Version 2.0.6
+
+- Fix: Fixed nested sections.
+
+## Version 2.0.5
+
+- Feature: Added array access to session::get.
+- Fix: Remove orderings before running pagination queries.
+- Fix: Session flush now correctly prepares empty data.
+- Fix: DB::raw now works on Eloquent properties.
+
+### Upgrading from 2.0.4
+
+- Replace **laravel** directory.
+
 ## Version 2.0.4
 
 - Feature: Added default parameter to File::get method.
