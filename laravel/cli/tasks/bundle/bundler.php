@@ -53,9 +53,11 @@ class Bundler extends Task {
 			// hosting party and installing it into the application.
 			$path = path('bundle').$this->path($bundle);
 
+			echo "Fetching [{$bundle['name']}]...";
+
 			$this->download($bundle, $path);
 
-			echo "Bundle [{$bundle['name']}] installed!".PHP_EOL;
+			echo "done! Bundle installed.".PHP_EOL;
 		}
 	}
 
@@ -123,7 +125,7 @@ class Bundler extends Task {
 
 			if ($response['status'] == 'not-found')
 			{
-				throw new \Exception("There is not a bundle named [$bundle].");
+				throw new \Exception("There is no bundle named [$bundle].");
 			}
 
 			// If the bundle was retrieved successfully, we will add it to

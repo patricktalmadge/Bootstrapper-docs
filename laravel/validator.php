@@ -559,7 +559,7 @@ class Validator {
 	protected function validate_active_url($attribute, $value)
 	{
 		$url = str_replace(array('http://', 'https://', 'ftp://'), '', Str::lower($value));
-		
+
 		return checkdnsrr($url);
 	}
 
@@ -608,7 +608,19 @@ class Validator {
 	 */
 	protected function validate_alpha_dash($attribute, $value)
 	{
-		return preg_match('/^([-a-z0-9_-])+$/i', $value);	
+		return preg_match('/^([-a-z0-9_-])+$/i', $value);
+	}
+
+	/**
+	 * Validate that an attribute passes a regular expression check.
+	 *
+	 * @param  string  $attribute
+	 * @param  mixed   $value
+	 * @return bool
+	 */
+	protected function validate_match($attribute, $value, $parameters)
+	{
+		return preg_match($parameters[0], $value);
 	}
 
 	/**
@@ -635,6 +647,32 @@ class Validator {
 	}
 
 	/**
+	 * Validate the date is before a given date.
+	 *
+	 * @param  string  $attribute
+	 * @param  mixed   $value
+	 * @param  array   $parameters
+	 * @return bool
+	 */
+	protected function validate_before($attribute, $value, $parameters)
+	{
+		return (strtotime($value) < strtotime($parameters[0]));
+	}
+
+	/**
+	 * Validate the date is after a given date.
+	 *
+	 * @param  string  $attribute
+	 * @param  mixed   $value
+	 * @param  array   $parameters
+	 * @return bool
+	 */
+	protected function validate_after($attribute, $value, $parameters)
+	{
+		return (strtotime($value) > strtotime($parameters[0]));
+	}
+
+	/**
 	 * Get the proper error message for an attribute and rule.
 	 *
 	 * @param  string  $attribute
@@ -654,7 +692,7 @@ class Validator {
 		{
 			return $this->messages[$custom];
 		}
-		elseif (Lang::has($custom = "validation.custom.{$custom}", $this->language))
+		elseif (Lang::has($custom = "{$bundle}validation.custom.{$custom}", $this->language))
 		{
 			return Lang::line($custom)->get($this->language);
 		}
@@ -715,7 +753,7 @@ class Validator {
 			$line = 'string';
 		}
 
-		return Lang::line("{$bundle}validation.{$rule}.{$line}")->get($this->language);	
+		return Lang::line("{$bundle}validation.{$rule}.{$line}")->get($this->language);
 	}
 
 	/**
@@ -866,6 +904,34 @@ class Validator {
 	}
 
 	/**
+	 * Replace all place-holders for the before rule.
+	 *
+	 * @param  string  $message
+	 * @param  string  $attribute
+	 * @param  string  $rule
+	 * @param  array   $parameters
+	 * @return string
+	 */
+	protected function replace_before($message, $attribute, $rule, $parameters)
+	{
+		return str_replace(':date', $parameters[0], $message);
+	}
+
+	/**
+	 * Replace all place-holders for the after rule.
+	 *
+	 * @param  string  $message
+	 * @param  string  $attribute
+	 * @param  string  $rule
+	 * @param  array   $parameters
+	 * @return string
+	 */
+	protected function replace_after($message, $attribute, $rule, $parameters)
+	{
+		return str_replace(':date', $parameters[0], $message);
+	}
+
+	/**
 	 * Get the displayable name for a given attribute.
 	 *
 	 * @param  string  $attribute
@@ -877,7 +943,7 @@ class Validator {
 
 		// More reader friendly versions of the attribute names may be stored
 		// in the validation language file, allowing a more readable version
-		// of the attribute name to be used in the message.
+		// of the attribute name in the message.
 		$line = "{$bundle}validation.attributes.{$attribute}";
 
 		$display = Lang::line($line)->get($this->language);
@@ -922,12 +988,12 @@ class Validator {
 	{
 		$parameters = array();
 
-		// The format for specifying validation rules and parameters follows a 
+		// The format for specifying validation rules and parameters follows a
 		// {rule}:{parameters} formatting convention. For instance, the rule
 		// "max:3" specifies that the value may only be 3 characters long.
 		if (($colon = strpos($rule, ':')) !== false)
 		{
-			$parameters = explode(',', substr($rule, $colon + 1));
+			$parameters = str_getcsv(substr($rule, $colon + 1));
 		}
 
 		return array(is_numeric($colon) ? substr($rule, 0, $colon) : $rule, $parameters);
@@ -996,7 +1062,7 @@ class Validator {
 			return call_user_func_array(static::$validators[$method], $parameters);
 		}
 
-		throw new \Exception("Call to undefined method [$method] on Validator instance.");
+		throw new \Exception("Method [$method] does not exist.");
 	}
 
 }
