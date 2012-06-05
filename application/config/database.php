@@ -69,10 +69,10 @@ return array(
 
 		'mysql' => array(
 			'driver'   => 'mysql',
-			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
-			'password' => '',
+			'host'     => DBHOST,
+			'database' => DBNAME,
+			'username' => DBUSER,
+			'password' => DBPASS,
 			'charset'  => 'utf8',
 			'prefix'   => '',
 		),
