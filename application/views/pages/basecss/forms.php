@@ -4,7 +4,7 @@
   </div>
 
   <h2>Four types of forms</h2>
-  <p>Bootstraper extends the Laravel Form class to provide the correct styles for Bootstrap. You can
+  <p>Bootstrapper extends the Laravel Form class to provide the correct styles for Bootstrap. You can
     open a form the normal Laravel Form way and just pass in the correct constant.</p>
   <table class="table table-bordered table-striped">
     <thead>
@@ -374,7 +374,7 @@ echo Form::medium_text('t_medium', null, array('placeholder' => 'Medium'));
     </div>
     <div class="span7">
       <h3>Prepend &amp; append inputs calls</h3>
-      <p>These looks are easy with Bootstraper just pass your control into the function 
+      <p>These looks are easy with Bootstrapper just pass your control into the function 
         and the text you want appended and/or prepended.</p>
 <pre class="prettyprint linenums">
 //Prepended text

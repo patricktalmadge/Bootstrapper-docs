@@ -4,7 +4,7 @@
 
 <header class="jumbotron subhead" id="overview">
     <h1>Components</h1>
-    <p class="lead">Laravel Bootstraper components provides navigation, alerts, pagination, and much more.</p>
+    <p class="lead">Laravel Bootstrapper components provides navigation, alerts, pagination, and much more.</p>
     <div class="subnav">
     <?php 
         echo Navigation::pills(

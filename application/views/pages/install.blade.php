@@ -5,7 +5,7 @@
 <header class="jumbotron subhead">
 	<div class="inner">
     	<h1>Install</h1>
-		<p class="lead">Installing Bootstraper is very simple, just like all Laravel Bundles!</p>
+		<p class="lead">Installing Bootstrapper is very simple, just like all Laravel Bundles!</p>
 	</div>
 	<div class="subnav">
     <?php 
@@ -23,45 +23,45 @@
 <div class="page-header">
 	<h1>Quick instructions</h1>
 </div>
-	<p>Run artisan to install bootstraper:</p>
+	<p>Run artisan to install bootstrapper:</p>
 <pre class="prettyprint linenums">
-php artisan bundle:install bootstraper
+php artisan bundle:install bootstrapper
 </pre>
 
 	<p>Add the following line to application/bundles.php.</p>
 <pre class="prettyprint linenums">
 return array(
-	'bootstraper' => array('auto' => true),
+	'bootstrapper' => array('auto' => true),
 );
 </pre>
 
 	<p>Change <code>Form</code> and <code>Paginator</code> in the application.php config file to:</p>
 
 <pre class="prettyprint linenums">
-'Form' 			=> 'Bootstraper\\Form',
-'Paginator'		=> 'Bootstraper\\Paginator',
+'Form' 			=> 'Bootstrapper\\Form',
+'Paginator'		=> 'Bootstrapper\\Paginator',
 </pre>
 
 	<p>Add the following to the application.php config file:</p>
 <pre class="prettyprint linenums">
-'Alert' 		=> 'Bootstraper\\Alert',
-'Tabbable' 		=> 'Bootstraper\\Tabbable',
-'Navigation'	=> 'Bootstraper\\Navigation',
-'Progress'		=> 'Bootstraper\\Progress',
-'Badges'		=> 'Bootstraper\\Badges',
-'Labels'		=> 'Bootstraper\\Labels',
-'DropdownButton'=> 'Bootstraper\\DropdownButton',
-'SplitDropdownButton'=> 'Bootstraper\\SplitDropdownButton',
-'ButtonGroup'	=> 'Bootstraper\\ButtonGroup',
-'ButtonToolbar'	=> 'Bootstraper\\ButtonToolbar',
-'Navbar'		=> 'Bootstraper\\Navbar',
-'Breadcrumbs'	=> 'Bootstraper\\Breadcrumbs',
-'Carousel'		=> 'Bootstraper\\Carousel',
-'Typeahead'		=> 'Bootstraper\\Typeahead',
-'Buttons'		=> 'Bootstraper\\Buttons',
+'Alert' 		=> 'Bootstrapper\\Alert',
+'Tabbable' 		=> 'Bootstrapper\\Tabbable',
+'Navigation'	=> 'Bootstrapper\\Navigation',
+'Progress'		=> 'Bootstrapper\\Progress',
+'Badges'		=> 'Bootstrapper\\Badges',
+'Labels'		=> 'Bootstrapper\\Labels',
+'DropdownButton'=> 'Bootstrapper\\DropdownButton',
+'SplitDropdownButton'=> 'Bootstrapper\\SplitDropdownButton',
+'ButtonGroup'	=> 'Bootstrapper\\ButtonGroup',
+'ButtonToolbar'	=> 'Bootstrapper\\ButtonToolbar',
+'Navbar'		=> 'Bootstrapper\\Navbar',
+'Breadcrumbs'	=> 'Bootstrapper\\Breadcrumbs',
+'Carousel'		=> 'Bootstrapper\\Carousel',
+'Typeahead'		=> 'Bootstrapper\\Typeahead',
+'Buttons'		=> 'Bootstrapper\\Buttons',
 </pre>
 
-	<p>Update <code>laravel\database\query.php</code> to use the Bootstraper Paginator and not the core class by changing the use statement.</p>
+	<p>Update <code>laravel\database\query.php</code> to use the Bootstrapper Paginator and not the core class by changing the use statement.</p>
 <pre class="prettyprint linenums">
 //Change 
 use Laravel\Paginator; 
@@ -77,8 +77,8 @@ php artisan bundle:publish
 
 	<p>Add the following to your template view file to include the Twitter Bootstrap CSS and Javascript.</p>
 <pre class="prettyprint linenums">
-Asset::container('bootstraper')->styles();
-Asset::container('bootstraper')->scripts();
+Asset::container('bootstrapper')->styles();
+Asset::container('bootstrapper')->scripts();
 </pre>
 </section>
 
@@ -88,26 +88,26 @@ Asset::container('bootstraper')->scripts();
 	<h1>Detailed instructions</h1>
 </div>
 	<h3>Install the bundle</h3>
-	<p>Open your terminal and run the following command to install the Bootstraper bundle.</p>
+	<p>Open your terminal and run the following command to install the Bootstrapper bundle.</p>
 <pre class="prettyprint linenums">
-php artisan bundle:install bootstraper
+php artisan bundle:install bootstrapper
 </pre>
 
 	<h3>Auto-load</h3>
-	<p>The easiest way to make sure Bootstraper is ready when you need it is to add the following line to application/bundles.php. Review the Laravel documentation if you would rather not auto-load Bootstraper.</p>
+	<p>The easiest way to make sure Bootstrapper is ready when you need it is to add the following line to application/bundles.php. Review the Laravel documentation if you would rather not auto-load Bootstrapper.</p>
 <pre class="prettyprint linenums">
 return array(
-	'bootstraper' => array('auto' => true),
+	'bootstrapper' => array('auto' => true),
 );
 </pre>
 
 	<h3>Recommended</h3>
-	<p>If you want to use Bootstraper instead of the Laravel core <code>Form</code> and <code>Paginator</code> you will need to 
+	<p>If you want to use Bootstrapper instead of the Laravel core <code>Form</code> and <code>Paginator</code> you will need to 
 		update the aliases array in the application.php config file.</p>
 
 <pre class="prettyprint linenums">
-'Form' 			=> 'Bootstraper\\Form',
-'Paginator'		=> 'Bootstraper\\Paginator',
+'Form' 			=> 'Bootstrapper\\Form',
+'Paginator'		=> 'Bootstrapper\\Paginator',
 </pre>
 
 	<p>If you want to use Laravel's excellent Pagination like:</p>
@@ -116,7 +116,7 @@ $orders = DB::table('orders')->paginate($per_page);
 ...
 &lt;?php echo $orders->links();?&gl;
 </pre>
-	<p>Update <code>laravel\database\query.php</code> to use the Bootstraper Paginator and not the core class by changing the use statement.</p>
+	<p>Update <code>laravel\database\query.php</code> to use the Bootstrapper Paginator and not the core class by changing the use statement.</p>
 <pre class="prettyprint linenums">
 //Change 
 use Laravel\Paginator; 
@@ -125,30 +125,30 @@ use Laravel\Paginator;
 use Paginator;
 </pre>
 
-	<p>This causes the query class to use the aliased version of Paginator.</p> The aliased version of Paginator should already be set to the Bootstraper version in application\config\application.php.</p>
+	<p>This causes the query class to use the aliased version of Paginator.</p> The aliased version of Paginator should already be set to the Bootstrapper version in application\config\application.php.</p>
 
 	<h3>Optional</h3>
-	<p>If you don't want to make all your Bootstraper calls with the <code>Bootstraper</code> namespace you will need to update the aliases array in the application.php config file.</p>
-	<p>Bootstraper extends two core classes <code>Form</code> and <code>Paginator</code> you will want to edit them by changing the namespace like so:</p>
+	<p>If you don't want to make all your Bootstrapper calls with the <code>Bootstrapper</code> namespace you will need to update the aliases array in the application.php config file.</p>
+	<p>Bootstrapper extends two core classes <code>Form</code> and <code>Paginator</code> you will want to edit them by changing the namespace like so:</p>
 
 
-	<p>Adding the following new entries will allow you to make a call like <code>Alert::success("You did it");</code> instead of <code>Bootstraper\Alert::success("You did it");</code></p>
+	<p>Adding the following new entries will allow you to make a call like <code>Alert::success("You did it");</code> instead of <code>Bootstrapper\Alert::success("You did it");</code></p>
 <pre class="prettyprint linenums">
-'Alert' 		=> 'Bootstraper\\Alert',
-'Tabbable' 		=> 'Bootstraper\\Tabbable',
-'Navigation'	=> 'Bootstraper\\Navigation',
-'Progress'		=> 'Bootstraper\\Progress',
-'Badges'		=> 'Bootstraper\\Badges',
-'Labels'		=> 'Bootstraper\\Labels',
-'DropdownButton'=> 'Bootstraper\\DropdownButton',
-'SplitDropdownButton'=> 'Bootstraper\\SplitDropdownButton',
-'ButtonGroup'	=> 'Bootstraper\\ButtonGroup',
-'ButtonToolbar'	=> 'Bootstraper\\ButtonToolbar',
-'Navbar'		=> 'Bootstraper\\Navbar',
-'Breadcrumbs'	=> 'Bootstraper\\Breadcrumbs',
-'Carousel'		=> 'Bootstraper\\Carousel',
-'Typeahead'		=> 'Bootstraper\\Typeahead',
-'Buttons'		=> 'Bootstraper\\Buttons',
+'Alert' 		=> 'Bootstrapper\\Alert',
+'Tabbable' 		=> 'Bootstrapper\\Tabbable',
+'Navigation'	=> 'Bootstrapper\\Navigation',
+'Progress'		=> 'Bootstrapper\\Progress',
+'Badges'		=> 'Bootstrapper\\Badges',
+'Labels'		=> 'Bootstrapper\\Labels',
+'DropdownButton'=> 'Bootstrapper\\DropdownButton',
+'SplitDropdownButton'=> 'Bootstrapper\\SplitDropdownButton',
+'ButtonGroup'	=> 'Bootstrapper\\ButtonGroup',
+'ButtonToolbar'	=> 'Bootstrapper\\ButtonToolbar',
+'Navbar'		=> 'Bootstrapper\\Navbar',
+'Breadcrumbs'	=> 'Bootstrapper\\Breadcrumbs',
+'Carousel'		=> 'Bootstrapper\\Carousel',
+'Typeahead'		=> 'Bootstrapper\\Typeahead',
+'Buttons'		=> 'Bootstrapper\\Buttons',
 </pre>
 
 	<h3>CSS and Javascript</h3>
@@ -157,10 +157,10 @@ use Paginator;
 php artisan bundle:publish
 </pre>
 
-	<p>In your view template add the following to include the CSS and Javascript files that come with Bootstraper.</p>
+	<p>In your view template add the following to include the CSS and Javascript files that come with Bootstrapper.</p>
 <pre class="prettyprint linenums">
-Asset::container('bootstraper')->styles();
-Asset::container('bootstraper')->scripts();
+Asset::container('bootstrapper')->styles();
+Asset::container('bootstrapper')->scripts();
 </pre>
 </section>
 @endsection

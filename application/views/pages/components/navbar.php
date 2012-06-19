@@ -159,7 +159,7 @@ Navbar::FIX_BOTTOM
          the large sample above.</p>
 
       <h3>Nav links</h3>
-      <p>Links are created using the standard Bootstraper link array. For the NavBar you 
+      <p>Links are created using the standard Bootstrapper link array. For the NavBar you 
         need to create an array of link arrays. <?php echo Labels::info('See the sample on the left.'); ?></p>
       
       <h3>Dividers</h3>

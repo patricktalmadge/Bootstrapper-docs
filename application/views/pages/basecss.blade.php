@@ -4,7 +4,7 @@
 
 <header class="jumbotron subhead" id="overview">
     <h1>Base CSS</h1>
-    <p class="lead">Basic Bootstrap goodness from Laravel Bootstraper.</p>
+    <p class="lead">Basic Bootstrap goodness from Laravel Bootstrapper.</p>
     <div class="subnav">
     <?php 
         echo Navigation::pills(

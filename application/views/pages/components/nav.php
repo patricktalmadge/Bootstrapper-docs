@@ -115,7 +115,7 @@ echo Navigation::pills(
   <div class="row">
     <div class="span4">
       <h3>Rich menus made easy</h3>
-      <p>Dropdown menus in Bootstraper tabs and pills are super easy. Just add a 
+      <p>Dropdown menus in Bootstrapper tabs and pills are super easy. Just add a 
         nested array of links as the <code>items</code> element, see the example.</p>
       <p>The opening and closing of the dropdowns are dynamicly handled by Bootstrap's javascript. 
         You don't need to add any custom javascript on your site for this functionality.</p>
@@ -325,7 +325,7 @@ echo Navigation::lists(
   <div class="row">
     <div class="span4">
       <h3>What's included</h3>
-      <p>Bootstraper has four styles: top (default), right, bottom, and left.</p>
+      <p>Bootstrapper has four styles: top (default), right, bottom, and left.</p>
       <p>You can change between them easily by adding _right, _bottom, or _left to the function call.</p>
       <hr>
       <p>You can use <code>Tabbable::tabs</code> or <code>Tabbable::pills</code> if you want pill style tabs.</p>

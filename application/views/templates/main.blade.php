@@ -3,12 +3,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Laravel Bootstraper By Patrick Talmadge</title>
+    <title>Laravel Bootstrapper By Patrick Talmadge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    {{ Asset::container('bootstraper')->styles() }}
+    {{ Asset::container('bootstrapper')->styles() }}
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -20,7 +20,7 @@
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
-    <?php echo Navbar::create('Bootstraper', '#', 
+    <?php echo Navbar::create('Bootstrapper', '#', 
       array(
         array(
             'items' => array(
@@ -45,7 +45,7 @@
     </div>
 
     {{ HTML::script('js/prettify.js') }}
-    {{ Asset::container('bootstraper')->scripts() }}
+    {{ Asset::container('bootstrapper')->scripts() }}
     {{ HTML::script('js/app.js') }}
     
   </body>

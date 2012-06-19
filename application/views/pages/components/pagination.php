@@ -10,7 +10,7 @@
         the Laravel version and only changes the output markup. <a class="btn" href="http://laravel.com/docs/views/pagination">View Laravel Pagination Docs</a></p>
 
       <h3>Link Function</h3>
-      <p>As you can see Bootstraper adds an extra parameter to links, the Laravel's make Paginator function.</p>
+      <p>As you can see Bootstrapper adds an extra parameter to links, the Laravel's make Paginator function.</p>
 <pre class="prettyprint linenums">
 public function links($adjacent = 3, $alignment = self::ALIGN_LEFT)
 </pre>
@@ -61,7 +61,7 @@ echo $orders->links(3, Paginator::ALIGN_RIGHT);
   <div class="row">
     <div class="span12">
       <h3>Pager Function</h3>
-      <p>Pager is a Bootstraper function that only add a Previous and Next button. The optional align paramenter 
+      <p>Pager is a Bootstrapper function that only add a Previous and Next button. The optional align paramenter 
         left and right aligns the buttons if set to true.</p>
 <pre class="prettyprint linenums">
 public function pager($align = false)

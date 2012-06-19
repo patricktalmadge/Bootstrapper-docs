@@ -4,7 +4,7 @@
 
 <header class="jumbotron subhead" id="overview">
     <h1>Extras</h1>
-    <p class="lead">More Bootstrap goodness from Laravel Bootstraper.</p>
+    <p class="lead">More Bootstrap goodness from Laravel Bootstrapper.</p>
     <div class="subnav">
     <?php 
         echo Navigation::pills(

@@ -1,10 +1,10 @@
-## Bootstraper Bundle, by Patrick Talmadge
+## Bootstrapper Bundle, by Patrick Talmadge
 
-Bootstraper is a set of classes that allow you to quickly create Twitter Bootstrap style markup.
+Bootstrapper is a set of classes that allow you to quickly create Twitter Bootstrap style markup.
 
 Install using Artisan CLI:
 
-	php artisan bundle:install bootstraper
+	php artisan bundle:install bootstrapper
 
 
 Either auto-load the bundle in application/bundles.php:

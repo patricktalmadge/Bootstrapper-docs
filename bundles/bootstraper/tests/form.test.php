@@ -1,6 +1,6 @@
-<?php namespace Bootstraper;
+<?php namespace Bootstrapper;
 
-\Bundle::start('Bootstraper');
+\Bundle::start('Bootstrapper');
 
 class TestForm extends \PHPUnit_Framework_TestCase {
 

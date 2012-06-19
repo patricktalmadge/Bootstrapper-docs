@@ -1,8 +1,8 @@
-<?php namespace Bootstraper;
+<?php namespace Bootstrapper;
 
-\Bundle::start('Bootstraper');
+\Bundle::start('Bootstrapper');
 
-use \Bootstraper;
+use \Bootstrapper;
 
 class TestAlert extends \PHPUnit_Framework_TestCase {
 

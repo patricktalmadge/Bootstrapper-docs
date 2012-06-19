@@ -35,6 +35,6 @@
 
 return array(
 
-	'bootstraper' => array('auto' => true),
+	'bootstrapper' => array('auto' => true),
 
 );
