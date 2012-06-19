@@ -53,7 +53,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKeyGoesHere!',
+	'key' => 'Thisisacoolkey!',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -155,7 +155,6 @@ return array(
 		'Event'      	=> 'Laravel\\Event',
 		'File'       	=> 'Laravel\\File',
 		'Filter'     	=> 'Laravel\\Routing\\Filter',
-		'Form'       	=> 'Laravel\\Form',
 		'Hash'       	=> 'Laravel\\Hash',
 		'HTML'       	=> 'Laravel\\HTML',
 		'Input'      	=> 'Laravel\\Input',
@@ -163,7 +162,6 @@ return array(
 		'Lang'       	=> 'Laravel\\Lang',
 		'Log'        	=> 'Laravel\\Log',
 		'Memcached'  	=> 'Laravel\\Memcached',
-		'Paginator'  	=> 'Laravel\\Paginator',
 		'Profiler'  	=> 'Laravel\\Profiling\\Profiler',
 		'URL'        	=> 'Laravel\\URL',
 		'Redirect'   	=> 'Laravel\\Redirect',
@@ -180,6 +178,25 @@ return array(
 		'URI'        	=> 'Laravel\\URI',
 		'Validator'  	=> 'Laravel\\Validator',
 		'View'       	=> 'Laravel\\View',
+		'Form' 			=> 'Bootstraper\\Form',
+		'Paginator'  	=> 'Bootstraper\\Paginator',
+
+
+		'Alert' 		=> 'Bootstraper\\Alert',
+		'Tabbable' 		=> 'Bootstraper\\Tabbable',
+		'Navigation' 	=> 'Bootstraper\\Navigation',
+		'Progress'  	=> 'Bootstraper\\Progress',
+		'Badges'  		=> 'Bootstraper\\Badges',
+		'Labels'  		=> 'Bootstraper\\Labels',
+		'DropdownButton'=> 'Bootstraper\\DropdownButton',
+		'SplitDropdownButton'=> 'Bootstraper\\SplitDropdownButton',
+		'ButtonGroup'	=> 'Bootstraper\\ButtonGroup',
+		'ButtonToolbar'	=> 'Bootstraper\\ButtonToolbar',
+		'Navbar'		=> 'Bootstraper\\Navbar',
+		'Breadcrumbs' 	=> 'Bootstraper\\Breadcrumbs',
+		'Carousel'		=> 'Bootstraper\\Carousel',
+		'Typeahead'		=> 'Bootstraper\\Typeahead',
+		'Buttons'		=> 'Bootstraper\\Buttons',
 	),
 
 );
