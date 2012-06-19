@@ -61,6 +61,15 @@ return array(
 'Buttons'		=> 'Bootstraper\\Buttons',
 </pre>
 
+	<p>Update <code>laravel\database\query.php</code> to use the Bootstraper Paginator and not the core class by changing the use statement.</p>
+<pre class="prettyprint linenums">
+//Change 
+use Laravel\Paginator; 
+
+//To
+use Paginator;
+</pre>
+
 	<p>Publish the bundle assets to your public folder.</p>
 <pre class="prettyprint linenums">
 php artisan bundle:publish
