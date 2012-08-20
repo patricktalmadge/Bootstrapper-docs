@@ -35,13 +35,6 @@ return array(
 );
 </pre>
 
-	<p>Change <code>Form</code> and <code>Paginator</code> in the application.php config file to:</p>
-
-<pre class="prettyprint linenums">
-'Form' 			=> 'Bootstrapper\\Form',
-'Paginator'		=> 'Bootstrapper\\Paginator',
-</pre>
-
 	<p>Add the following to the application.php config file:</p>
 <pre class="prettyprint linenums">
 'Alert'                 => 'Bootstrapper\\Alert',
@@ -52,15 +45,17 @@ return array(
 'ButtonToolbar'         => 'Bootstrapper\\ButtonToolbar',
 'Carousel'              => 'Bootstrapper\\Carousel',
 'DropdownButton'        => 'Bootstrapper\\DropdownButton',
+'Form'                  => 'Bootstrapper\\Form',
 'Helpers'               => 'Bootstrapper\\Helpers',
 'Icons'                 => 'Bootstrapper\\Icons',
 'Labels'                => 'Bootstrapper\\Labels',
 'Navbar'                => 'Bootstrapper\\Navbar',
 'Navigation'            => 'Bootstrapper\\Navigation',
-'Progress'	            => 'Bootstrapper\\Progress',
+'Paginator'             => 'Bootstrapper\\Paginator',
+'Progress'              => 'Bootstrapper\\Progress',
 'SplitDropdownButton'   => 'Bootstrapper\\SplitDropdownButton',
 'Tabbable'              => 'Bootstrapper\\Tabbable',
-'Typeahead'             => 'Bootstrapper\\Typeahead', 
+'Typeahead'             => 'Bootstrapper\\Typeahead',
 </pre>
 
 	<p>Update <code>laravel\database\query.php</code> to use the Bootstrapper Paginator and not the core class by changing the use statement.</p>
