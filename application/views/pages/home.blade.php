@@ -19,12 +19,12 @@
 
   <div class="bs-links">
     <ul class="quick-links">
-      <li>
+<!--      <li>
         <iframe class="github-btn" src="http://markdotto.github.com/github-buttons/github-btn.html?user=patricktalmadge&amp;repo=bootstrapper&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="112px" height="20px"></iframe>
       </li>
       <li>
         <iframe class="github-btn" src="http://markdotto.github.com/github-buttons/github-btn.html?user=patricktalmadge&amp;repo=bootstrapper&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px"></iframe>
-      </li>
+      </li> -->
       <li class="follow-btn">
         <a href="https://twitter.com/patricktalmadge" class="twitter-follow-button" data-show-count="false">Follow @patricktalmadge</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
