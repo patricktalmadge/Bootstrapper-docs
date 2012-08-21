@@ -1,4 +1,4 @@
-<?php namespace Bootstrapper;
+<?php namespace bootstrapper;
 
 use \HTML;
 

@@ -2,37 +2,65 @@
 
 Bootstrapper is a set of classes that allow you to quickly create Twitter Bootstrap style markup.
 
+##View bundle site for full install instructions.
+http://laravelbootstrapper.phpfogapp.com
+
+
 Install using Artisan CLI:
 
 	php artisan bundle:install bootstrapper
 
-
-Either auto-load the bundle in application/bundles.php:
+Add the following line to application/bundles.php
 
 	return array(
-		'stripe' => array('auto'=>true)
+		'bootstrapper' => array('auto' => true),
 	);
 
-Or manually start:
+Add the following to the application.php config file:
 
-	Bundle::start('stripe');
+	'Alert'                 => 'Bootstrapper\\Alert',
+	'Badges'                => 'Bootstrapper\\Badges',
+	'Breadcrumbs'           => 'Bootstrapper\\Breadcrumbs',
+	'Buttons'               => 'Bootstrapper\\Buttons',
+	'ButtonGroup'           => 'Bootstrapper\\ButtonGroup',
+	'ButtonToolbar'         => 'Bootstrapper\\ButtonToolbar',
+	'Carousel'              => 'Bootstrapper\\Carousel',
+	'DropdownButton'        => 'Bootstrapper\\DropdownButton',
+	'Form'                  => 'Bootstrapper\\Form',
+	'Helpers'               => 'Bootstrapper\\Helpers',
+	'Icons'                 => 'Bootstrapper\\Icons',
+	'Labels'                => 'Bootstrapper\\Labels',
+	'Navbar'                => 'Bootstrapper\\Navbar',
+	'Navigation'            => 'Bootstrapper\\Navigation',
+	'Paginator'             => 'Bootstrapper\\Paginator',
+	'Progress'              => 'Bootstrapper\\Progress',
+	'SplitDropdownButton'   => 'Bootstrapper\\SplitDropdownButton',
+	'Tabbable'              => 'Bootstrapper\\Tabbable',
+	'Typeahead'             => 'Bootstrapper\\Typeahead', 
 
-You can than use the Stripe API like normal (see Stripe API https://stripe.com/docs/api?lang=php)
 
-	Stripe::setApiKey("YOUR_KEY");
-	Stripe_Charge::create(array(
-		"amount" => 40000,
-		"currency" => "usd",
-		"card" => "tok_Ydsdsedsad", // obtained with Stripe.js
-		"description" => "Donation because you rock!")
-	);
+Update laravel\database\query.php to use the Bootstrapper Paginator and not the core class by changing the use statement.
 
+	//Change 
+	use Laravel\Paginator; 
 
-##Current Stripe API version is 1.7.1.
+	//To
+	use Paginator;
 
 
-Stripe is an payment company with a simple API and a reasonable fee structure.
+Publish the bundle assets to your public folder.
 
-- Homepage:		   https://stripe.com/
-- PHP API: 	  	   https://stripe.com/docs/api?lang=php
-- Documentation:   https://stripe.com/docs 
+	php artisan bundle:publish
+
+
+Add the following to your template view file to include the Twitter Bootstrap CSS and Javascript.
+
+	Asset::container('bootstrapper')->styles();
+	Asset::container('bootstrapper')->scripts();
+
+
+
+##Current Twitter Bootstrap version is 2.0.4.
+
+- Homepage:		http://twitter.github.com/bootstrap/
+- GitHub:   	https://github.com/twitter/bootstrap/
