@@ -274,7 +274,14 @@ class Form extends \Laravel\Form {
 	 */
 	public static function control_group($label, $control, $group_class = '', $help = null)
 	{
-		$html = '<div class="control-group '. $group_class .'">'; 
+		$class = 'control-group';
+		
+		if($group_class !== '')
+		{
+			$class .= ' '.$group_class;
+		}
+
+		$html = '<div class="'.$class.'">';  
 		$html .= static::add_attribute('class', 'control-label', $label);
      	$html .= '<div class="controls">';
 
@@ -483,7 +490,7 @@ class Form extends \Laravel\Form {
 	 * @param  bool    $hasDropdown
 	 * @return string
 	 */
-	public static function submit($value, $attributes = array(), $hasDropdown = false)
+	public static function submit($value = NULL, $attributes = array(), $hasDropdown = false)
 	{
 		return Buttons::submit($value, $attributes, $hasDropdown);
 	}
@@ -497,7 +504,7 @@ class Form extends \Laravel\Form {
 	 * @param  bool    $hasDropdown
 	 * @return string
 	 */
-	public static function reset($value, $attributes = array(), $hasDropdown = false)
+	public static function reset($value = NULL, $attributes = array(), $hasDropdown = false)
 	{
 		return Buttons::reset($value, $attributes, $hasDropdown);
 	}
@@ -511,7 +518,7 @@ class Form extends \Laravel\Form {
 	 * @param  bool    $hasDropdown
 	 * @return string
 	 */
-	public static function button($value, $attributes = array(), $hasDropdown = false)
+	public static function button($value = NULL, $attributes = array(), $hasDropdown = false)
 	{
 		return Buttons::normal($value, $attributes, $hasDropdown);
 	}

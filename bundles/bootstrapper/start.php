@@ -12,7 +12,7 @@
 
 Autoloader::map(array(
 	'Bootstrapper\\Alert'               => __DIR__.'/alert.php',
-	'Bootstrapper\\Badges'  	    	=> __DIR__.'/badges.php',
+	'Bootstrapper\\Badges'  	    => __DIR__.'/badges.php',
 	'Bootstrapper\\Breadcrumbs'         => __DIR__.'/breadcrumbs.php',
 	'Bootstrapper\\ButtonGroup'         => __DIR__.'/buttongroup.php',
 	'Bootstrapper\\Buttons'             => __DIR__.'/buttons.php',
