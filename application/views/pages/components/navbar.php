@@ -112,7 +112,7 @@ echo Navbar::create('Project name', '#',
       <p>You can make the Navbar responsive and collapse for smaller screens by passing true 
         in for the fifth paramenter to the create function.</p> 
 <pre class="prettyprint linenums">
-Navbar::create('Project Name', '#', array(...), Navbar::FIXED_TOP, true);
+Navbar::create('Project Name', '#', array(...), Navbar::FIX_TOP, true);
 </pre>
     
     <?php echo Alert::info('<strong>Heads up!</strong> The responsive navbar requires the Bootstrap JS file and the responsive Bootstrap CSS file.', false); ?>
