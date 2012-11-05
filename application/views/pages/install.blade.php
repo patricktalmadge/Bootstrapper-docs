@@ -37,25 +37,29 @@ return array(
 
 	<p>Add the following to the application.php config file:</p>
 <pre class="prettyprint linenums">
-'Alert'                 => 'Bootstrapper\\Alert',
-'Badges'                => 'Bootstrapper\\Badges',
-'Breadcrumbs'           => 'Bootstrapper\\Breadcrumbs',
-'Buttons'               => 'Bootstrapper\\Buttons',
-'ButtonGroup'           => 'Bootstrapper\\ButtonGroup',
-'ButtonToolbar'         => 'Bootstrapper\\ButtonToolbar',
-'Carousel'              => 'Bootstrapper\\Carousel',
-'DropdownButton'        => 'Bootstrapper\\DropdownButton',
-'Form'                  => 'Bootstrapper\\Form',
-'Helpers'               => 'Bootstrapper\\Helpers',
-'Icons'                 => 'Bootstrapper\\Icons',
-'Labels'                => 'Bootstrapper\\Labels',
-'Navbar'                => 'Bootstrapper\\Navbar',
-'Navigation'            => 'Bootstrapper\\Navigation',
-'Paginator'             => 'Bootstrapper\\Paginator',
-'Progress'              => 'Bootstrapper\\Progress',
-'SplitDropdownButton'   => 'Bootstrapper\\SplitDropdownButton',
-'Tabbable'              => 'Bootstrapper\\Tabbable',
-'Typeahead'             => 'Bootstrapper\\Typeahead',
+'Alert'          => 'Bootstrapper\\Alert',
+'Badge'          => 'Bootstrapper\\Badge',
+'Breadcrumb'     => 'Bootstrapper\\Breadcrumb',
+'Button'         => 'Bootstrapper\\Button',
+'ButtonGroup'    => 'Bootstrapper\\ButtonGroup',
+'ButtonToolbar'  => 'Bootstrapper\\ButtonToolbar',
+'Carousel'       => 'Bootstrapper\\Carousel',
+'DropdownButton' => 'Bootstrapper\\DropdownButton',
+'Form'           => 'Bootstrapper\\Form',
+'Helpers'        => 'Bootstrapper\\Helpers',
+'Icon'           => 'Bootstrapper\\Icon',
+'Image'          => 'Bootstrapper\\Image',
+'Label'          => 'Bootstrapper\\Label',
+'MediaObject'    => 'Bootstrapper\\MediaObject',
+'Navbar'         => 'Bootstrapper\\Navbar',
+'Navigation'     => 'Bootstrapper\\Navigation',
+'Paginator'      => 'Bootstrapper\\Paginator',
+'Progress'       => 'Bootstrapper\\Progress',
+'Tabbable'       => 'Bootstrapper\\Tabbable',
+'Table'          => 'Bootstrapper\\Table',
+'Thumbnail'      => 'Bootstrapper\\Thumbnail',
+'Typeahead'      => 'Bootstrapper\\Typeahead',
+'Typography'     => 'Bootstrapper\\Typography',
 </pre>
 
 	<p>Update <code>laravel\database\query.php</code> to use the Bootstrapper Paginator and not the core class by changing the use statement.</p>
@@ -99,13 +103,6 @@ return array(
 </pre>
 
 	<h3>Recommended</h3>
-	<p>If you want to use Bootstrapper instead of the Laravel core <code>Form</code> and <code>Paginator</code> you will need to 
-		update the aliases array in the application.php config file.</p>
-
-<pre class="prettyprint linenums">
-'Form' 			=> 'Bootstrapper\\Form',
-'Paginator'		=> 'Bootstrapper\\Paginator',
-</pre>
 
 	<p>If you want to use Laravel's excellent Pagination like:</p>
 <pre class="prettyprint linenums">
@@ -131,23 +128,29 @@ use Paginator;
 
 	<p>Adding the following new entries will allow you to make a call like <code>Alert::success("You did it");</code> instead of <code>Bootstrapper\Alert::success("You did it");</code></p>
 <pre class="prettyprint linenums">
-'Alert'                 => 'Bootstrapper\\Alert',
-'Badges'                => 'Bootstrapper\\Badges',
-'Breadcrumbs'           => 'Bootstrapper\\Breadcrumbs',
-'Buttons'               => 'Bootstrapper\\Buttons',
-'ButtonGroup'           => 'Bootstrapper\\ButtonGroup',
-'ButtonToolbar'         => 'Bootstrapper\\ButtonToolbar',
-'Carousel'              => 'Bootstrapper\\Carousel',
-'DropdownButton'        => 'Bootstrapper\\DropdownButton',
-'Helpers'               => 'Bootstrapper\\Helpers',
-'Icons'                 => 'Bootstrapper\\Icons',
-'Labels'                => 'Bootstrapper\\Labels',
-'Navbar'                => 'Bootstrapper\\Navbar',
-'Navigation'            => 'Bootstrapper\\Navigation',
-'Progress'	            => 'Bootstrapper\\Progress',
-'SplitDropdownButton'   => 'Bootstrapper\\SplitDropdownButton',
-'Tabbable'              => 'Bootstrapper\\Tabbable',
-'Typeahead'             => 'Bootstrapper\\Typeahead', 
+'Alert'          => 'Bootstrapper\\Alert',
+'Badge'          => 'Bootstrapper\\Badge',
+'Breadcrumb'     => 'Bootstrapper\\Breadcrumb',
+'Button'         => 'Bootstrapper\\Button',
+'ButtonGroup'    => 'Bootstrapper\\ButtonGroup',
+'ButtonToolbar'  => 'Bootstrapper\\ButtonToolbar',
+'Carousel'       => 'Bootstrapper\\Carousel',
+'DropdownButton' => 'Bootstrapper\\DropdownButton',
+'Form'           => 'Bootstrapper\\Form',
+'Helpers'        => 'Bootstrapper\\Helpers',
+'Icon'           => 'Bootstrapper\\Icon',
+'Image'          => 'Bootstrapper\\Image',
+'Label'          => 'Bootstrapper\\Label',
+'MediaObject'    => 'Bootstrapper\\MediaObject',
+'Navbar'         => 'Bootstrapper\\Navbar',
+'Navigation'     => 'Bootstrapper\\Navigation',
+'Paginator'      => 'Bootstrapper\\Paginator',
+'Progress'       => 'Bootstrapper\\Progress',
+'Tabbable'       => 'Bootstrapper\\Tabbable',
+'Table'          => 'Bootstrapper\\Table',
+'Thumbnail'      => 'Bootstrapper\\Thumbnail',
+'Typeahead'      => 'Bootstrapper\\Typeahead',
+'Typography'     => 'Bootstrapper\\Typography',
 </pre>
 
 	<h3>CSS and Javascript</h3>

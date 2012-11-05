@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,19 +18,21 @@
 </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
-
-    <?php echo Navbar::create('Bootstrapper', '#', 
-      array(
-        array(
-            'items' => array(
-                array('label'=>'Home', 'url' => URL::to_route('home')),
-                array('label'=>'Install', 'url' => URL::to_route('install')),
-                array('label'=>'Base CSS', 'url' => URL::to_route('basecss')),
-                array('label'=>'Components', 'url' => URL::to_route('components')),
-                array('label'=>'Extras', 'url' => URL::to_route('extras')),
+    <?php echo Navbar::create(array(), Navbar::FIX_TOP)
+        ->with_brand('Bootstrapper', '/')
+        ->with_menus(
+            Navigation::links(
+              array(
+                array('Home', URL::to_route('home')),
+                array('Install', URL::to_route('install')),
+                array('Base CSS', URL::to_route('basecss')),
+                array('Components', URL::to_route('components')),
+                array('Extras', URL::to_route('extras')),
+              )
             )
-        ),
-      ), Navbar::FIX_TOP, true); ?>
+          ); 
+
+    ?>
 
     <div class="container">
 
