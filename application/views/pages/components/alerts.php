@@ -14,8 +14,8 @@
 	      		<li>error()</li>
 	      		<li>danger()</li>
 	      	</ul>
-	      	<p>You can disabled the close option by calling the open function.
-	      		<code>Alert::info('message')->open()</code></p>
+	      	<p>You can disabled the close option by passing in false as the second parameter.
+	      		<code>Alert::info('message', false)</code></p>
 			<hr>
 			<h3>JavaScript</h3>
 			<p>The closing of the alert is dynamicly handled by Bootstrap's javascript. 
@@ -30,15 +30,15 @@
 echo Alert::warning("&lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.");	
 </pre>
 			<p>If you want more padding around your alert include the <code>.alert-block</code> class.</p>
-			<?php echo Alert::warning("<strong>Warning</strong> Look at all this extra room I have to strech out in.")->block(); ?>
+			<?php echo Alert::warning("<strong>Warning</strong> Look at all this extra room I have to strech out in.", array('class' => 'alert-block')); ?>
 <pre class="prettyprint linenums">
-echo Alert::warning("&lt;strong&gt;Warning!&lt;/strong&gt; Look at all this extra room I have to strech out in.")->block();	
+echo Alert::warning("&lt;strong&gt;Warning!&lt;/strong&gt; Look at all this extra room I have to strech out in.", array('class' => 'alert-block'));	
 </pre>
 			<p>If you want a block heading add <code>.alert-heading</code> class to your heading within the alert message.</p>
 
-			<?php echo Alert::warning("<h4 class=\"alert-heading\">Warning!</h4> Now I'm extra important with my block heading.")->block(); ?>
+			<?php echo Alert::warning("<h4 class=\"alert-heading\">Warning!</h4> Now I'm extra important with my block heading.", array('class' => 'alert-block')); ?>
 <pre class="prettyprint linenums">
-echo Alert::warning("&lt;h4 class=\"alert-heading\"&gt;Warning!&lt;/h4&gt; Now I'm extra important with my block heading.")->block();	
+echo Alert::warning("&lt;h4 class=\"alert-heading\"&gt;Warning!&lt;/h4&gt; Now I'm extra important with my block heading.", array('class' => 'alert-block'));	
 </pre>
 
 		</div>

@@ -32,28 +32,28 @@
 |
 */
 
-Route::any('/', array('as' => 'home', function()
+Route::get('/', array('as' => 'home', function()
 {
 	return View::make('pages.home');
 }));
 
-Route::any('install', array('as' => 'install', function()
+Route::get('install', array('as' => 'install', function()
 {
 	return View::make('pages.install');
 }));
 
 
-Route::any('basecss', array('as' => 'basecss', function()
+Route::get('basecss', array('as' => 'basecss', function()
 {
     return View::make('pages.basecss');
 }));
 
-Route::any('components', array('as' => 'components', function()
+Route::get('components', array('as' => 'components', function()
 {
     return View::make('pages.components');
 }));
 
-Route::any('extras', array('as' => 'extras', function()
+Route::get('extras', array('as' => 'extras', function()
 {
     return View::make('pages.extras');
 }));

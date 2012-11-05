@@ -8,14 +8,9 @@
     <div class="subnav">
     <?php 
         echo Navigation::pills(
-            Navigation::links(
-                array(
-                    array('Typography', '#typography'),
-                    array('Tables', '#tables'),
-                    array('Forms', '#forms'),
-                    array('Buttons', '#buttons'),
-                    array('Images', '#images'),
-                )
+            array(
+                array('label'=>'Forms', 'url'=>'#forms'),
+                array('label'=>'Buttons', 'url'=>'#buttons'),
             )
         );
       ?>
@@ -23,14 +18,9 @@
 </header>
 
 <?php 
-    include View::path("pages.basecss.typography");
-
-    include View::path("pages.basecss.tables");
 
     include View::path("pages.basecss.forms");
 
     include View::path("pages.basecss.buttons");
-
-    include View::path("pages.basecss.images");
 ?>
 @endsection
