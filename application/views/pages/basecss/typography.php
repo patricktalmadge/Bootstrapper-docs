@@ -6,6 +6,7 @@
     <div class="row">
         <div class="span12">
             <h3>Lead body copy</h3>
+            
             <div>
                 <?php echo Typography::lead('Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.'); ?>
             </div>

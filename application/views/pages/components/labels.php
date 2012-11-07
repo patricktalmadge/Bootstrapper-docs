@@ -13,50 +13,50 @@
     <tbody>
       <tr>
         <td>
-          <?php echo Labels::normal('Default'); ?>
+          <?php echo Label::normal('Default'); ?>
         </td>
         <td>
-          <code>echo Labels::normal('Default');</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <?php echo Labels::success('Success'); ?>
-        </td>
-        <td>
-          <code>echo Labels::success('Success');</code>
+          <code>echo Label::normal('Default');</code>
         </td>
       </tr>
       <tr>
         <td>
-          <?php echo Labels::warning('Warning'); ?>
+          <?php echo Label::success('Success'); ?>
         </td>
         <td>
-          <code>echo Labels::warning('Warning');</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <?php echo Labels::important('Important'); ?>
-        </td>
-        <td>
-          <code>echo Labels::important('Important');</code>
+          <code>echo Label::success('Success');</code>
         </td>
       </tr>
       <tr>
         <td>
-          <?php echo Labels::info('Info'); ?>
+          <?php echo Label::warning('Warning'); ?>
         </td>
         <td>
-          <code>echo Labels::info('Info');</code>
+          <code>echo Label::warning('Warning');</code>
         </td>
       </tr>
       <tr>
         <td>
-          <?php echo Labels::inverse('Inverse'); ?>
+          <?php echo Label::important('Important'); ?>
         </td>
         <td>
-          <code>echo Labels::inverse('Inverse');</code>
+          <code>echo Label::important('Important');</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <?php echo Label::info('Info'); ?>
+        </td>
+        <td>
+          <code>echo Label::info('Info');</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <?php echo Label::inverse('Inverse'); ?>
+        </td>
+        <td>
+          <code>echo Label::inverse('Inverse');</code>
         </td>
       </tr>
     </tbody>

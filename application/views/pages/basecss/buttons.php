@@ -74,6 +74,21 @@
         <?php echo Button::large_disabled_primary_normal('Primary button'); ?> 
         <?php echo Button::large_disabled_normal('Button'); ?>
       </p>
+
+      <h3>With Icons</h3>
+      <p>Use a chained method to add an icon <code>with_icon($icon, $attributes = array(), $prependIcon = true)</code> 
+        or the shortcut methods <code>prepend_with_icon($icon, $attributes = array())</code> and 
+        <code>append_with_icon($icon, $attributes = array())</code>
+        <a href="http://twitter.github.com/bootstrap/base-css.html#icons" class="btn">More Info</a>
+      </p>
+      <p>
+        <?php echo Button::normal('Prepend Button')->with_icon('ok'); ?> 
+        <?php echo Button::normal('Append Button')->append_with_icon('ok'); ?>
+      </p>
+<pre class="prettyprint linenums">
+echo Button::normal('Prepend Button')->with_icon('ok');
+echo Button::normal('Append Button')->append_with_icon('ok');
+</pre>
     </div>
     <div class="span6">
       <h3>Buttons and Link Buttons</h3>

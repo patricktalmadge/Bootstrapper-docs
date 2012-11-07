@@ -44,9 +44,9 @@
 
 	include View::path("pages.components.breadcrumbs");
 
-  include View::path("pages.components.pagination");
+    include View::path("pages.components.pagination");
 
-  include View::path("pages.components.labels");
+    include View::path("pages.components.labels");
 
  	include View::path("pages.components.badges");
 

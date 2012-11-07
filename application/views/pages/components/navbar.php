@@ -20,8 +20,8 @@ echo Navbar::create('Project name', '#',
                         array('label'=>'Action', 'url'=>'#'),
                         array('label'=>'Another action', 'url'=>'#'),
                         array('label'=>'Something else here', 'url'=>'#'),
-                        '---',
-                        array('header'=>'Nav header'),
+                        array('label'=>'---'),
+                        array('label'=> Navigation::HEADER, 'url'=>'Nav header'),
                         array('label'=>'Separated link', 'url'=>'#'),
                         array('label'=>'One more separated link', 'url'=>'#'),
                     )
@@ -35,13 +35,13 @@ echo Navbar::create('Project name', '#',
             'attributes' => array('class' => 'pull-right'),
             'items' => array(
                 array('label'=>'Link', 'url'=>'#'),
-                '|||',
+                array('label'=>'|||'),
                 array('label'=>'Dropdown', 'url'=>'#', 
                     'items'=>array(
                         array('label'=>'Action', 'url'=>'#'),
                         array('label'=>'Another action', 'url'=>'#'),
                         array('label'=>'Something else here', 'url'=>'#'),
-                        '---',
+                        array('label'=>'---'),
                         array('label'=>'Separated link', 'url'=>'#'),
                     )
                 )
@@ -160,7 +160,7 @@ Navbar::FIX_BOTTOM
 
       <h3>Nav links</h3>
       <p>Links are created using the standard Bootstrapper link array. For the NavBar you 
-        need to create an array of link arrays. <?php echo Labels::info('See the sample on the left.'); ?></p>
+        need to create an array of link arrays. <?php echo Label::info('See the sample on the left.'); ?></p>
       
       <h3>Dividers</h3>
       <p>You can easily add vertical dividers by adding <code>'|||'</code> instead of a link array.</p>

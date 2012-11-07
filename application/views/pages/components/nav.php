@@ -132,7 +132,7 @@ echo Navigation::pills(
                     array('label'=>'Action', 'url'=>'#'),
                     array('label'=>'Another action', 'url'=>'#'),
                     array('label'=>'Something else here', 'url'=>'#'),
-                    '---',
+                    array('label'=>'---'),
                     array('label'=>'Separated link', 'url'=>'#'),
                   )
                 )
@@ -181,7 +181,7 @@ echo Navigation::tabs(
                     array('label'=>'Action', 'url'=>'#'),
                     array('label'=>'Another action', 'url'=>'#'),
                     array('label'=>'Something else here', 'url'=>'#'),
-                    '---',
+                    array('label'=>'---'),
                     array('label'=>'Separated link', 'url'=>'#'),
                   )
                 )
@@ -243,14 +243,14 @@ echo Navigation::pills(
         <?php 
           echo Navigation::lists(
               array(
-                  array('header'=>'List header'),
+                  array('label'=> Navigation::HEADER, 'url'=>'List header'),
                   array('label'=>'Home', 'url' => '#', 'active' => true),
                   array('label'=>'Library', 'url'=>'#'),
                   array('label'=>'Applications', 'url'=>'#'),
-                  array('header'=>'Another list header'),
+                  array('label'=>Navigation::HEADER, 'url'=>'Another list header'),
                   array('label'=>'Profile', 'url'=>'#'),
                   array('label'=>'Settings', 'url'=>'#'),
-                  '---',
+                  array('label'=>'---'),
                   array('label'=>'Help', 'url'=>'#'),
               )
             );
@@ -281,14 +281,14 @@ echo Navigation::lists(
         <?php 
           echo Navigation::lists(
               array(
-                  array('header'=>'List header'),
+                  array('label'=> Navigation::HEADER, 'url'=>'List header'),
                   array('label'=>'Home', 'url' => '#', 'active' => true, 'icon' => 'home', 'attributes' => 'icon-white'),
                   array('label'=>'Library', 'url'=>'#', 'icon' => 'book'),
                   array('label'=>'Applications', 'url'=>'#', 'icon' => 'pencil'),
-                  array('header'=>'Another list header'),
+                  array('label'=> Navigation::HEADER, 'url'=>'Another list header'),
                   array('label'=>'Profile', 'url'=>'#', 'icon' => 'user'),
                   array('label'=>'Settings', 'url'=>'#', 'icon' => 'cog'),
-                  '---',
+                  array('label'=>'---'),
                   array('label'=>'Help', 'url'=>'#', 'icon' => 'flag'),
               )
             );
@@ -345,11 +345,16 @@ echo Navigation::lists(
 // Add 'align' => 'pull-right'
 
   echo Tabbable::tabs(
-      array(
-                array('label'=>'Section 1', 'active' => true, 'content' => "<p>I'm in Section 1.</p>"),
-                array('label'=>'Section 2', 'content' => "<p>Howdy, I'm in Section 2.</p>"),
-                array('label'=>'Section 3', 'content' => "<p>What up girl, this is Section 3.</p>"),
-            ), false, array('style' => 'margin-bottom: 18px;'), array(), array('style' => "padding-bottom: 9px; border-bottom: 1px solid #ddd;"));
+        Navigation::links(
+          array(
+            array('Section 1', "<p>I'm in Section 1.</p>",true),
+            array('Section 2', "<p>Howdy, I'm in Section 2.</p>"),
+            array('Section 3', "<p>What up girl, this is Section 3.</p>"),
+          )
+        ),
+        array('style' => 'margin-bottom: 18px;')
+      )->stacked()
+      ->content_attributes(array('style' => "padding-bottom: 9px; border-bottom: 1px solid #ddd;"));
       ?>
 
       <h3>Straightforward</h3>
@@ -375,12 +380,15 @@ echo Tabbable::tabs(
 
       <?php
   echo Tabbable::tabs_below(
-      array(
-                array('label'=>'Section 1', 'active' => true, 'content' => "<p>I'm in Section 1.</p>"),
-                array('label'=>'Section 2', 'content' => "<p>Howdy, I'm in Section 2.</p>"),
-                array('label'=>'Section 3', 'content' => "<p>What up girl, this is Section 3.</p>"),
-            ));
-      ?>
+        Navigation::links(
+          array(
+            array('Section 1', "<p>I'm in Section 1.</p>",true),
+            array('Section 2', "<p>Howdy, I'm in Section 2.</p>"),
+            array('Section 3', "<p>What up girl, this is Section 3.</p>"),
+          )
+        )
+    );
+  ?>
 
 <pre class="prettyprint linenums" style="margin-top: 11px;">
 echo Tabbable::tabs_below(
@@ -401,12 +409,15 @@ array(
       <p>You can left align the tabs by calling <code>Tabbable::tabs_left</code> with the same input array.</p>
       <?php
   echo Tabbable::tabs_left(
-      array(
-                array('label'=>'Section 1', 'active' => true, 'content' => "<p>I'm in Section 1.</p>"),
-                array('label'=>'Section 2', 'content' => "<p>Howdy, I'm in Section 2.</p>"),
-                array('label'=>'Section 3', 'content' => "<p>What up girl, this is Section 3.</p>"),
-            ));
-      ?>
+        Navigation::links(
+          array(
+            array('Section 1', "<p>I'm in Section 1.</p>",true),
+            array('Section 2', "<p>Howdy, I'm in Section 2.</p>"),
+            array('Section 3', "<p>What up girl, this is Section 3.</p>"),
+          )
+        )
+    );
+  ?>
 <pre class="prettyprint linenums">
 echo Tabbable::tabs_left(
 array(
@@ -426,12 +437,15 @@ array(
       <p>You can left align the tabs by calling <code>Tabbable::tabs_right</code> with the same input array.</p>
       <?php
   echo Tabbable::tabs_right(
-      array(
-                array('label'=>'Section 1', 'active' => true, 'content' => "<p>I'm in Section 1.</p>"),
-                array('label'=>'Section 2', 'content' => "<p>Howdy, I'm in Section 2.</p>"),
-                array('label'=>'Section 3', 'content' => "<p>What up girl, this is Section 3.</p>"),
-            ));
-      ?>
+        Navigation::links(
+          array(
+            array('Section 1', "<p>I'm in Section 1.</p>",true),
+            array('Section 2', "<p>Howdy, I'm in Section 2.</p>"),
+            array('Section 3', "<p>What up girl, this is Section 3.</p>"),
+          )
+        )
+    );
+  ?>
 <pre class="prettyprint linenums">
 echo Tabbable::tabs_right(
 array(

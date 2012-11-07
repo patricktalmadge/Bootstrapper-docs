@@ -17,18 +17,18 @@ public static function create($links, $attributes = array())
       <h3>Examples</h3>
       <p>A single example shown as it might be displayed across multiple pages.</p>
 
-      <?php echo Breadcrumbs::create(array('Home')); ?>
+      <?php echo Breadcrumb::create(array('Home')); ?>
 
-      <?php echo Breadcrumbs::create(array('Home' => '#', 'Library')); ?>
+      <?php echo Breadcrumb::create(array('Home' => '#', 'Library')); ?>
 
-      <?php echo Breadcrumbs::create(array('Home' => '#', 'Library' => '#', 'Data')); ?>
+      <?php echo Breadcrumb::create(array('Home' => '#', 'Library' => '#', 'Data')); ?>
     </div>
     <div class="span6">
       <h3>Markup</h3>
 <pre class="prettyprint linenums">
-echo Breadcrumbs::create(array('Home'));
-echo Breadcrumbs::create(array('Home' => '#', 'Library'));
-echo Breadcrumbs::create(array('Home' => '#', 'Library' => '#', 'Data'));
+echo Breadcrumb::create(array('Home'));
+echo Breadcrumb::create(array('Home' => '#', 'Library'));
+echo Breadcrumb::create(array('Home' => '#', 'Library' => '#', 'Data'));
 </pre>
 </div>
   </div>

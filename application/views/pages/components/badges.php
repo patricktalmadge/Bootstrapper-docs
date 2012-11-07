@@ -13,50 +13,50 @@
     <tbody>
       <tr>
         <td>
-          <?php echo Badges::normal(1); ?>
+          <?php echo Badge::normal(1); ?>
         </td>
         <td>
-          <code>echo Badges::normal(1);</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <?php echo Badges::success(2); ?>
-        </td>
-        <td>
-          <code>echo Badges::success(2);</code>
+          <code>echo Badge::normal(1);</code>
         </td>
       </tr>
       <tr>
         <td>
-          <?php echo Badges::warning(4); ?>
+          <?php echo Badge::success(2); ?>
         </td>
         <td>
-          <code>echo Badges::warning(4);</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <?php echo Badges::important(6); ?>
-        </td>
-        <td>
-          <code>echo Badges::important(6);</code>
+          <code>echo Badge::success(2);</code>
         </td>
       </tr>
       <tr>
         <td>
-          <?php echo Badges::info(8); ?>
+          <?php echo Badge::warning(4); ?>
         </td>
         <td>
-          <code>echo Badges::info(8);</code>
+          <code>echo Badge::warning(4);</code>
         </td>
       </tr>
       <tr>
         <td>
-          <?php echo Badges::inverse(10); ?>
+          <?php echo Badge::important(6); ?>
         </td>
         <td>
-          <code>echo Badges::inverse(10);</code>
+          <code>echo Badge::important(6);</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <?php echo Badge::info(8); ?>
+        </td>
+        <td>
+          <code>echo Badge::info(8);</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <?php echo Badge::inverse(10); ?>
+        </td>
+        <td>
+          <code>echo Badge::inverse(10);</code>
         </td>
       </tr>
     </tbody>
