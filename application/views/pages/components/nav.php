@@ -5,52 +5,54 @@
 
   <h2>Lightweight defaults <small>Same object, different function calls</small></h2>
   <div class="row">
-    <div class="span4">
-      <h3>Component alignment</h3>
-      <p>To align nav links, use the <code>pull-left</code> or <code>pull-right</code>. Example: <code>array('label'=>'Profile', 'url'=>'#', 'align' => 'pull-right'),</code>.</p>
-    </div>
-    <div class="span4">
+    <div class="span6">
       <h3>Basic tabs</h3>
       <p>Pass an array of links to <code>Navigation::tabs</code>:</p>
       <?php 
         echo Navigation::tabs(
-            array(
-                  array('label'=>'Home', 'url' => '#', 'active' => true),
-                  array('label'=>'Profile', 'url'=>'#'),
-                  array('label'=>'Messages', 'url'=>'#'),
+            Navigation::links(
+              array(
+                array('Home', '#', true),
+                array('Profile', '#'),
+                array('Messages', '#'),
+              )
             )
           );
       ?>
 <pre class="prettyprint linenums">
 echo Navigation::tabs(
-  array(
-    array('label'=>'Home', 'url' => '#', 
-        'active' => true),
-    array('label'=>'Profile', 'url'=>'#'),
-    array('label'=>'Messages', 'url'=>'#'),
+  Navigation::links(
+    array(
+      array('Home', '#', true),
+      array('Profile', '#'),
+      array('Messages', '#'),
+    )
   )
 );
 </pre>
     </div>
-    <div class="span4">
+    <div class="span6">
       <h3>Basic pills</h3>
       <p>Pass an array of links to <code>Navigation::pills</code>:</p>
       <?php 
         echo Navigation::pills(
-            array(
-                  array('label'=>'Home', 'url' => '#', 'active' => true),
-                  array('label'=>'Profile', 'url'=>'#'),
-                  array('label'=>'Messages', 'url'=>'#'),
+            Navigation::links(
+              array(
+                array('Home', '#', true),
+                array('Profile', '#'),
+                array('Messages', '#'),
+              )
             )
           );
       ?>
 <pre class="prettyprint linenums">
 echo Navigation::pills(
-  array(
-    array('label'=>'Home', 'url' => '#', 
-        'active' => true),
-    array('label'=>'Profile', 'url'=>'#'),
-    array('label'=>'Messages', 'url'=>'#'),
+  Navigation::links(
+    array(
+      array('Home', '#', true),
+      array('Profile', '#'),
+      array('Messages', '#'),
+    )
   )
 );
 </pre>
@@ -68,21 +70,24 @@ echo Navigation::pills(
       <p>Same tabs example, the true parameter creates stacked tabs.</p>
       <?php 
         echo Navigation::tabs(
-            array(
-                  array('label'=>'Home', 'url' => '#', 'active' => true),
-                  array('label'=>'Profile', 'url'=>'#'),
-                  array('label'=>'Messages', 'url'=>'#'),
+            Navigation::links(
+              array(
+                array('Home', '#', true),
+                array('Profile', '#'),
+                array('Messages', '#'),
+              )
             ), true
         );
      ?>
 <pre class="prettyprint linenums">
 echo Navigation::tabs(
-  array(
-    array('label'=>'Home', 'url' => '#', 
-        'active' => true),
-    array('label'=>'Profile', 'url'=>'#'),
-    array('label'=>'Messages', 'url'=>'#'),
-  ), true
+    Navigation::links(
+      array(
+        array('Home', '#', true),
+        array('Profile', '#'),
+        array('Messages', '#'),
+      )
+    ), true
 );
 </pre>
     </div>
@@ -91,21 +96,24 @@ echo Navigation::tabs(
       <p>Same pills example, the true parameter creates stacked pills.</p>
       <?php 
         echo Navigation::pills(
-            array(
-                  array('label'=>'Home', 'url' => '#', 'active' => true),
-                  array('label'=>'Profile', 'url'=>'#'),
-                  array('label'=>'Messages', 'url'=>'#'),
+            Navigation::links(
+              array(
+                array('Home', '#', true),
+                array('Profile', '#'),
+                array('Messages', '#'),
+              )
             ), true
         );
      ?>
 <pre class="prettyprint linenums">
 echo Navigation::pills(
-  array(
-    array('label'=>'Home', 'url' => '#', 
-        'active' => true),
-    array('label'=>'Profile', 'url'=>'#'),
-    array('label'=>'Messages', 'url'=>'#'),
-  ), true
+    Navigation::links(
+      array(
+        array('Home', '#', true),
+        array('Profile', '#'),
+        array('Messages', '#'),
+      )
+    ), true
 );
 </pre>
     </div>
@@ -125,46 +133,38 @@ echo Navigation::pills(
       <h3>Tabs with dropdowns</h3>
       <?php 
         echo Navigation::tabs(
-            array(
-                array('label'=>'Home', 'url' => '#', 'active' => true),
-                array('label'=>'Help', 'url'=>'#'),
-                array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
-                    array('label'=>'Action', 'url'=>'#'),
-                    array('label'=>'Another action', 'url'=>'#'),
-                    array('label'=>'Something else here', 'url'=>'#'),
-                    array('label'=>'---'),
-                    array('label'=>'Separated link', 'url'=>'#'),
+            Navigation::links(
+              array(
+                array('Home', '#', true),
+                array('Help', '#'),
+                array('Dropdown', '#', false, false, 
+                  array(
+                    array('Action', '#'),
+                    array('Another action', '#'),
+                    array('Something else here', '#'),
+                    array(Navigation::DIVIDER),
+                    array('Separated link', '#'),
                   )
                 )
+              )
             )
           );
       ?>
 <pre class="prettyprint linenums">
 echo Navigation::tabs(
-  array(
-    array('label'=>'Home', 'url' => '#', 
-      'active' => true),
-    array('label'=>'Help', 'url'=>'#'),
-    array('label'=>'Messages', 'url'=>'#'),
-    array('label'=>'Dropdown', 'url'=>'#', 
-      'items'=>array(
-      array(
-        'label'=>'Action', 
-        'url'=>'#'
-      ),
-      array(
-        'label'=>'Another action', 
-        'url'=>'#'
-      ),
-      array(
-        'label'=>'Something else here', 
-        'url'=>'#'
-      ),
-      '---',
-      array(
-        'label'=>'Separated link', 
-        'url'=>'#'
-      ),
+  Navigation::links(
+    array(
+      array('Home', '#', true),
+      array('Help', '#'),
+      array('Dropdown', '#', false, false, 
+        array(
+          array('Action', '#'),
+          array('Another action', '#'),
+          array('Something else here', '#'),
+          array(Navigation::DIVIDER),
+          array('Separated link', '#'),
+        )
+      )
     )
   )
 );
@@ -174,46 +174,38 @@ echo Navigation::tabs(
       <h3>Pills with dropdowns</h3>
       <?php 
         echo Navigation::pills(
-            array(
-                array('label'=>'Home', 'url' => '#', 'active' => true),
-                array('label'=>'Help', 'url'=>'#'),
-                array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
-                    array('label'=>'Action', 'url'=>'#'),
-                    array('label'=>'Another action', 'url'=>'#'),
-                    array('label'=>'Something else here', 'url'=>'#'),
-                    array('label'=>'---'),
-                    array('label'=>'Separated link', 'url'=>'#'),
+            Navigation::links(
+              array(
+                array('Home', '#', true),
+                array('Help', '#'),
+                array('Dropdown', '#', false, false, 
+                  array(
+                    array('Action', '#'),
+                    array('Another action', '#'),
+                    array('Something else here', '#'),
+                    array(Navigation::DIVIDER),
+                    array('Separated link', '#'),
                   )
                 )
+              )
             )
           );
       ?>
 <pre class="prettyprint linenums">
 echo Navigation::pills(
-  array(
-    array('label'=>'Home', 'url' => '#', 
-      'active' => true),
-    array('label'=>'Help', 'url'=>'#'),
-    array('label'=>'Messages', 'url'=>'#'),
-    array('label'=>'Dropdown', 'url'=>'#', 
-      'items'=>array(
-      array(
-        'label'=>'Action', 
-        'url'=>'#'
-      ),
-      array(
-        'label'=>'Another action', 
-        'url'=>'#'
-      ),
-      array(
-        'label'=>'Something else here', 
-        'url'=>'#'
-      ),
-      '---',
-      array(
-        'label'=>'Separated link', 
-        'url'=>'#'
-      ),
+  Navigation::links(
+    array(
+      array('Home', '#', true),
+      array('Help', '#'),
+      array('Dropdown', '#', false, false, 
+        array(
+          array('Action', '#'),
+          array('Another action', '#'),
+          array('Something else here', '#'),
+          array(Navigation::DIVIDER),
+          array('Separated link', '#'),
+        )
+      )
     )
   )
 );
@@ -228,13 +220,13 @@ echo Navigation::pills(
       <p>Lists are great for menus. Structurally, they're built the same as tabs and pills.</p>
       <hr>
       <h4>With Headers</h4>
-      <p>To make a list header include an array element of <code>header</code> like: <code>array('header'=>'List header')</code></p>
+      <p>To make a list header include an array element of <code>header</code> like: <code>array(Navigation::HEADER, 'List header')</code></p>
       <hr>
       <h4>With icons</h4>
-      <p>You can easily add icons to your list by including <code>icon</code> like <code>array('label'=>'Profile', 'url'=>'#', 'icon' => 'user')</code></p>
+      <p>You can easily add icons to your list by passing a 6th element in the array like <code>array('Applications', '#', false, false, null, 'pencil')</code></p>
       <p><a class="btn" href="http://twitter.github.com/bootstrap/base-css.html#icons">Icon List</a></p>
       <h4>Horizontal dividers</h4>
-      <p>If you want a horizontal divider don't use an array and just include <code>---</code></p>
+      <p>If you want a horizontal divider don't use an array and just include <code>Navigation::DIVIDER</code></p>
     </div>
     <div class="span4">
       <h3>Example nav list</h3>
@@ -242,34 +234,38 @@ echo Navigation::pills(
       <div class="well" style="padding: 8px 0;">
         <?php 
           echo Navigation::lists(
+            Navigation::links(
               array(
-                  array('label'=> Navigation::HEADER, 'url'=>'List header'),
-                  array('label'=>'Home', 'url' => '#', 'active' => true),
-                  array('label'=>'Library', 'url'=>'#'),
-                  array('label'=>'Applications', 'url'=>'#'),
-                  array('label'=>Navigation::HEADER, 'url'=>'Another list header'),
-                  array('label'=>'Profile', 'url'=>'#'),
-                  array('label'=>'Settings', 'url'=>'#'),
-                  array('label'=>'---'),
-                  array('label'=>'Help', 'url'=>'#'),
+                array(Navigation::HEADER, 'List header'),
+                array('Home', '#', true),
+                array('Library', '#'),
+                array('Applications', '#'),
+                array(Navigation::HEADER, 'Another list header'),
+                array('Profile', '#'),
+                array('Settings', '#'),
+                array(Navigation::DIVIDER),
+                array('Help', '#'),
               )
-            );
+            )
+          );
         ?>
       </div> <!-- /well -->
 <pre class="prettyprint linenums">
 echo Navigation::lists(
-  array(
-    array('header'=>'List header'),
-    array('label'=>'Home', 'url' => '#', 
-      'active' => true),
-    array('label'=>'Library', 'url'=>'#'),
-    array('label'=>'Applications', 
-      'url'=>'#'),
-    array('header'=>'Another list header'),
-    array('label'=>'Profile', 'url'=>'#'),
-    array('label'=>'Settings', 'url'=>'#'),
-    '---',
-    array('label'=>'Help', 'url'=>'#'),
+  Navigation::links(
+    array(
+      array(Navigation::HEADER, 
+        'List header'),
+      array('Home', '#', true),
+      array('Library', '#'),
+      array('Applications', '#'),
+      array(Navigation::HEADER, 
+        'Another list header'),
+      array('Profile', '#'),
+      array('Settings', '#'),
+      array(Navigation::DIVIDER),
+      array('Help', '#'),
+    )
   )
 );
 </pre>
@@ -280,40 +276,44 @@ echo Navigation::lists(
       <div class="well" style="padding: 8px 0;">
         <?php 
           echo Navigation::lists(
+            Navigation::links(
               array(
-                  array('label'=> Navigation::HEADER, 'url'=>'List header'),
-                  array('label'=>'Home', 'url' => '#', 'active' => true, 'icon' => 'home', 'attributes' => 'icon-white'),
-                  array('label'=>'Library', 'url'=>'#', 'icon' => 'book'),
-                  array('label'=>'Applications', 'url'=>'#', 'icon' => 'pencil'),
-                  array('label'=> Navigation::HEADER, 'url'=>'Another list header'),
-                  array('label'=>'Profile', 'url'=>'#', 'icon' => 'user'),
-                  array('label'=>'Settings', 'url'=>'#', 'icon' => 'cog'),
-                  array('label'=>'---'),
-                  array('label'=>'Help', 'url'=>'#', 'icon' => 'flag'),
+                array(Navigation::HEADER, 'List header'),
+                array('Home', '#', true, false, null, 'home'),
+                array('Library', '#', false, false, null, 'book'),
+                array('Applications', '#', false, false, null, 'pencil'),
+                array(Navigation::HEADER, 'Another list header'),
+                array('Profile', '#', false, false, null, 'user'),
+                array('Settings', '#', false, false, null, 'cog'),
+                array(Navigation::DIVIDER),
+                array('Help', '#', false, false, null, 'flag'),
               )
-            );
+            )
+          );
         ?>
       </div> <!-- /well -->
 <pre class="prettyprint linenums">
 echo Navigation::lists(
-  array(
-    array('header'=>'List header'),
-    array('label'=>'Home', 'url' => '#', 
-      'active' => true, 'icon' => 'home', 
-      'attributes' => 'icon-white'),
-    array('label'=>'Library', 'url'=>'#', 
-      'icon' => 'book'),
-    array('label'=>'Applications', 
-      'url'=>'#', 
-      'icon' => 'pencil'),
-    array('header'=>'Another list header'),
-    array('label'=>'Profile', 'url'=>'#', 
-      'icon' => 'user'),
-    array('label'=>'Settings', 'url'=>'#', 
-      'icon' => 'cog'),
-    '---',
-    array('label'=>'Help', 'url'=>'#', 
-      'icon' => 'flag'),
+  Navigation::links(
+    array(
+      array(Navigation::HEADER, 
+        'List header'),
+      array('Home', '#', true, 
+        false, null, 'home'),
+      array('Library', '#', false, 
+        false, null, 'book'),
+      array('Applications', '#', 
+        false, false, null, 'pencil'),
+      array(Navigation::HEADER, 
+        'Another list header'),
+      array('Profile', '#', false, 
+        false, null, 'user'),
+      array('Settings', '#', false, 
+        false, null, 'cog'),
+      array(Navigation::DIVIDER),
+      array('Help', '#', false, 
+        false, null, 'flag'),
+    )
   )
 );
 </pre>
@@ -347,24 +347,35 @@ echo Navigation::lists(
   echo Tabbable::tabs(
         Navigation::links(
           array(
-            array('Section 1', "<p>I'm in Section 1.</p>",true),
+            array('Section 1', "<p>I'm in Section 1.</p>", true),
             array('Section 2', "<p>Howdy, I'm in Section 2.</p>"),
             array('Section 3', "<p>What up girl, this is Section 3.</p>"),
           )
         ),
         array('style' => 'margin-bottom: 18px;')
-      )->stacked()
-      ->content_attributes(array('style' => "padding-bottom: 9px; border-bottom: 1px solid #ddd;"));
+      )->content_attributes(array('style' => "padding-bottom: 9px; border-bottom: 1px solid #ddd;"));
       ?>
 
       <h3>Straightforward</h3>
       <p>Like the other menus we just add a content element to each array item.</p>
 <pre class="prettyprint linenums">
 echo Tabbable::tabs(
-  array(
-    array('label'=>'Section 1', 'active' => true, 'content' => "&lt;p&gt;I'm in Section 1.&lt;/p&gt;"),
-    array('label'=>'Section 2', 'content' => "&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;"),
-    array('label'=>'Section 3', 'content' => "&lt;p&gt;What up girl, this is Section 3.&lt;/p&gt;"),
+  Navigation::links(
+    array(
+      array(
+        'Section 1', 
+        "&lt;p&gt;I'm in Section 1.&lt;/p&gt;", 
+        true
+      ),
+      array(
+        'Section 2', 
+        "&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;"
+      ),
+      array(
+        'Section 3', 
+        "&lt;p&gt;What up girl, this is Section 3.&lt;/p&gt;"
+      ),
+    )
   )
 );
 </pre>
@@ -382,24 +393,32 @@ echo Tabbable::tabs(
   echo Tabbable::tabs_below(
         Navigation::links(
           array(
-            array('Section 1', "<p>I'm in Section 1.</p>",true),
+            array('Section 1', "<p>I'm in Section 1.</p>", true),
             array('Section 2', "<p>Howdy, I'm in Section 2.</p>"),
             array('Section 3', "<p>What up girl, this is Section 3.</p>"),
           )
         )
-    );
+      );
   ?>
 
 <pre class="prettyprint linenums" style="margin-top: 11px;">
 echo Tabbable::tabs_below(
-array(
-    array('label'=>'Section 1', 
-      'active' => true, 
-      'content' => "&lt;p&gt;I'm in Section 1.&lt;/p&gt;"),
-    array('label'=>'Section 2', 
-      'content' => "&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;"),
-    array('label'=>'Section 3', 
-      'content' => "&lt;p&gt;What up girl, this is Section 3.&lt;/p&gt;"),
+  Navigation::links(
+    array(
+      array(
+        'Section 1', 
+        "&lt;p&gt;I'm in Section 1.&lt;/p&gt;", 
+        true
+      ),
+      array(
+        'Section 2', 
+        "&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;"
+      ),
+      array(
+        'Section 3', 
+        "&lt;p&gt;What up girl, this is Section 3.&lt;/p&gt;"
+      ),
+    )
   )
 );
 </pre>
@@ -411,23 +430,31 @@ array(
   echo Tabbable::tabs_left(
         Navigation::links(
           array(
-            array('Section 1', "<p>I'm in Section 1.</p>",true),
+            array('Section 1', "<p>I'm in Section 1.</p>", true),
             array('Section 2', "<p>Howdy, I'm in Section 2.</p>"),
             array('Section 3', "<p>What up girl, this is Section 3.</p>"),
           )
         )
-    );
+      );
   ?>
 <pre class="prettyprint linenums">
 echo Tabbable::tabs_left(
-array(
-    array('label'=>'Section 1', 
-      'active' => true, 
-      'content' => "&lt;p&gt;I'm in Section 1.&lt;/p&gt;"),
-    array('label'=>'Section 2', 
-      'content' => "&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;"),
-    array('label'=>'Section 3', 
-      'content' => "&lt;p&gt;What up girl, this is Section 3.&lt;/p&gt;"),
+  Navigation::links(
+    array(
+      array(
+        'Section 1', 
+        "&lt;p&gt;I'm in Section 1.&lt;/p&gt;", 
+        true
+      ),
+      array(
+        'Section 2', 
+        "&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;"
+      ),
+      array(
+        'Section 3', 
+        "&lt;p&gt;What up girl, this is Section 3.&lt;/p&gt;"
+      ),
+    )
   )
 );
 </pre>
@@ -439,23 +466,31 @@ array(
   echo Tabbable::tabs_right(
         Navigation::links(
           array(
-            array('Section 1', "<p>I'm in Section 1.</p>",true),
+            array('Section 1', "<p>I'm in Section 1.</p>", true),
             array('Section 2', "<p>Howdy, I'm in Section 2.</p>"),
             array('Section 3', "<p>What up girl, this is Section 3.</p>"),
           )
         )
-    );
+      );
   ?>
 <pre class="prettyprint linenums">
 echo Tabbable::tabs_right(
-array(
-    array('label'=>'Section 1', 
-      'active' => true, 
-      'content' => "&lt;p&gt;I'm in Section 1.&lt;/p&gt;"),
-    array('label'=>'Section 2', 
-      'content' => "&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;"),
-    array('label'=>'Section 3', 
-      'content' => "&lt;p&gt;What up girl, this is Section 3.&lt;/p&gt;"),
+  Navigation::links(
+    array(
+      array(
+        'Section 1', 
+        "&lt;p&gt;I'm in Section 1.&lt;/p&gt;", 
+        true
+      ),
+      array(
+        'Section 2', 
+        "&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;"
+      ),
+      array(
+        'Section 3', 
+        "&lt;p&gt;What up girl, this is Section 3.&lt;/p&gt;"
+      ),
+    )
   )
 );
 </pre>

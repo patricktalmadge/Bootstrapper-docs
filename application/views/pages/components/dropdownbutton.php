@@ -16,7 +16,7 @@
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -29,7 +29,7 @@
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -42,7 +42,7 @@
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -57,7 +57,7 @@
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -70,7 +70,7 @@
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -83,7 +83,7 @@
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -96,7 +96,7 @@
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -114,7 +114,7 @@ echo DropdownButton::normal('Action',
         array('Action', '#'),
         array('Another action', '#'),
         array('Something else here', '#'),
-        array('---'),
+        array(Navigation::DIVIDER),
         array('Separated link', '#'),
       )
     )
@@ -133,7 +133,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -146,7 +146,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -159,7 +159,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -190,7 +190,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -203,7 +203,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -216,7 +216,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -231,7 +231,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -244,7 +244,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -257,7 +257,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -272,7 +272,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -288,7 +288,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -302,7 +302,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -316,7 +316,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -335,7 +335,7 @@ echo DropdownButton::normal('Action',
       array('Action', '#'),
       array('Another action', '#'),
       array('Something else here', '#'),
-      array('---'),
+      array(Navigation::DIVIDER),
       array('Separated link', '#'),
     )
   )
@@ -350,7 +350,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -363,7 +363,7 @@ echo DropdownButton::normal('Action',
                   array('Action', '#'),
                   array('Another action', '#'),
                   array('Something else here', '#'),
-                  array('---'),
+                  array(Navigation::DIVIDER),
                   array('Separated link', '#'),
                 )
               )
@@ -377,7 +377,7 @@ echo DropdownButton::normal('Right dropup',
       array('Action', '#'),
       array('Another action', '#'),
       array('Something else here', '#'),
-      array('---'),
+      array(Navigation::DIVIDER),
       array('Separated link', '#'),
     )
   )

@@ -48,7 +48,7 @@
         <?php
         echo Form::vertical_open(null,'POST', array('class' => 'well'));
         echo Form::label('something', 'Label name');
-        echo Form::text('something', null, array('class' => 'span3', 'placeholder' => 'Type something...'));
+        echo Form::span3_text('something', 'Type something...');
         echo Form::block_help('Example block-level help text here.');
         echo Form::labelled_checkbox('checker', 'Check me out');
         echo Form::submit('Submit');
@@ -57,7 +57,7 @@
 <pre class="prettyprint linenums">
 echo Form::vertical_open();
 echo Form::label('something', 'Label name');
-echo Form::text('something', null, array('class' => 'span3', 'placeholder' => 'Type something...'));
+echo Form::span3_text('something', 'Type something...');
 echo Form::block_help('Example block-level help text here.');
 echo Form::labelled_checkbox('checker', 'Check me out');
 echo Form::submit('Submit');
@@ -199,13 +199,13 @@ echo Form::close();
           <div class="control-group">
             <label class="control-label" for="disabledInput">Disabled input</label>
             <div class="controls">
-              <?php echo Form::xlarge_text('disabledInput', null, array('class' => 'disabled', 'placeholder' => 'Disabled input here...', 'disabled' => '')); ?>
+              <?php echo Form::xlarge_text('disabledInput', 'Disabled input here...', array('class' => 'disabled', 'disabled' => 'disabled')); ?>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="optionsCheckbox2">Disabled checkbox</label>
             <div class="controls">
-              <?php echo Form::labelled_checkbox('optionsCheckbox2', 'This is a disabled checkbox', 'option1', false, array('disabled' => '')); ?>
+              <?php echo Form::labelled_checkbox('optionsCheckbox2', 'This is a disabled checkbox', 'option1', false, array('disabled' => 'disabled')); ?>
             </div>
           </div>
 
@@ -217,10 +217,10 @@ echo Form::xlarge_text('focusedInput', 'This is focused...', array('class' => 'f
 echo Form::xlarge_uneditable('Some value here');
 
 //Disabled
-echo Form::xlarge_text('disabledInput', null, array('class' => 'disabled', 'placeholder' => 'Disabled input here...', 'disabled' => ''));
+echo Form::xlarge_text('disabledInput', 'Disabled input here...', array('class' => 'disabled', 'disabled' => 'disabled'));
 
 //Disabled Checkbox
-echo Form::labelled_checkbox('optionsCheckbox2', 'This is a disabled checkbox', 'option1', false, array('disabled' => ''));
+echo Form::labelled_checkbox('optionsCheckbox2', 'This is a disabled checkbox', 'option1', false, array('disabled' => 'disabled'));
 </pre>
       </fieldset>
       </form>
@@ -275,9 +275,9 @@ echo Form::control_group(Form::label('inputSuccess', 'Select with success'),
     <div class="span5">
       <h3>Sizing</h3>
       <?php 
-        echo '<div>'.Form::span1_text('t_span1', null, array('placeholder' => 'span1')).'</div>';
-        echo '<div>'.Form::span2_text('t_span2', null, array('placeholder' => 'span2')).'</div>';
-        echo '<div>'.Form::span3_text('t_span3', null, array('placeholder' => 'span3')).'</div>'; 
+        echo '<div>'.Form::span1_text('t_span1', 'span1').'</div>';
+        echo '<div>'.Form::span2_text('t_span2', 'span2').'</div>';
+        echo '<div>'.Form::span3_text('t_span3', 'span3').'</div>'; 
 
         echo '<div>'.Form::span1_select('s_span1', array('1', '2', '3', '4', '5')).'</div>';
         echo '<div>'.Form::span2_select('s_span2', array('1', '2', '3', '4', '5')).'</div>';
@@ -290,9 +290,9 @@ echo Form::control_group(Form::label('inputSuccess', 'Select with success'),
       <p>You can size input fields by making your standard call with <code>span*_</code> in front of the function name. 
         All of the same <code>span*</code> that the grid system uses for input sizes will work.</p>
 <pre class="prettyprint linenums">
-echo Form::span1_text('t_span1', null, array('placeholder' => '.span1'));
-echo Form::span2_text('t_span2', null, array('placeholder' => '.span2'));
-echo Form::span3_text('t_span3', null, array('placeholder' => '.span3')); 
+echo '<div>'.Form::span1_text('t_span1', 'span1').'</div>';
+echo '<div>'.Form::span2_text('t_span2', 'span2').'</div>';
+echo '<div>'.Form::span3_text('t_span3', 'span3').'</div>'; 
 
 echo Form::span1_select('s_span1', array('1', '2', '3', '4', '5'));
 echo Form::span2_select('s_span2', array('1', '2', '3', '4', '5'));
@@ -304,9 +304,9 @@ echo Form::span3_select('s_span3', array('1', '2', '3', '4', '5'));
     <div class="span5">
       <h3>Alternate sizing</h3>
       <?php
-          echo '<div>'.Form::mini_text('t_mini', null, array('placeholder' => 'Mini')).'</div>';
-          echo '<div>'.Form::small_text('t_small', null, array('placeholder' => 'Small')).'</div>';
-          echo '<div>'.Form::medium_text('t_medium', null, array('placeholder' => 'Medium')).'</div>'; 
+          echo '<div>'.Form::mini_text('t_mini', 'Mini').'</div>';
+          echo '<div>'.Form::small_text('t_small', 'Small').'</div>';
+          echo '<div>'.Form::medium_text('t_medium', 'Medium').'</div>'; 
       ?>
     </div>
     <div class="span7">
@@ -314,9 +314,9 @@ echo Form::span3_select('s_span3', array('1', '2', '3', '4', '5'));
       <p>You may also use static sizes that don't adapt. 
                 Available sizes <code>mini, small, medium, large, xlarge, xxlarge</code>.</p>
 <pre class="prettyprint linenums">
-echo Form::mini_text('t_mini', null, array('placeholder' => 'Mini'));
-echo Form::small_text('t_small', null, array('placeholder' => 'Small'));
-echo Form::medium_text('t_medium', null, array('placeholder' => 'Medium')); 
+echo Form::mini_text('t_mini', 'Mini');
+echo Form::small_text('t_small', 'Small');
+echo Form::medium_text('t_medium', 'Medium'); 
 </pre>
     </div> 
   </div>
