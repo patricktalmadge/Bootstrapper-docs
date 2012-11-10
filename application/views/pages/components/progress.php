@@ -82,19 +82,35 @@ echo Progress::normal_striped_active(40);
         );
       ?>
 <pre class="prettyprint linenums">
-echo Progress::normal(
-  array(
-    35 => 'success',
-    20 => 'warning',
-    10 => 'danger',
-  )
-);
+echo Progress::normal(array(35 => 'success', 20 => 'warning', 0 => 'danger'));
 </pre>
     </div>
     <div class="span4">
       <h3>More info</h3>
       <p>Check out the Bootstrap documentation for more information about the progress bars and browser support.</p>
       <p><a class="btn" href="http://twitter.github.com/bootstrap/components.html#progress">Info on Progress</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <h3>Automatic</h3>
+    </div>
+    <div class="span6">
+      <?php
+        echo Progress::automatic(20);
+        echo Progress::automatic(40);
+        echo Progress::automatic_striped(60);
+        echo Progress::automatic_striped_active(80);
+      ?>
+
+    </div>
+    <div class="span6">
+<pre class="prettyprint linenums">
+echo Progress::automatic(20);
+echo Progress::automatic(40);
+echo Progress::automatic_striped(60);
+echo Progress::automatic_striped_active(80);
+</pre>
     </div>
   </div>
 
