@@ -1,0 +1,3 @@
+[submodule "bundles/bootstrapper"]
+	path = bundles/bootstrapper
+	url = git://github.com/patricktalmadge/bootstrapper.git
