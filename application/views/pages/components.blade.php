@@ -25,6 +25,7 @@
                 array('label'=>'Badges', 'url'=>'#badges'),
                 array('label'=>'Alerts', 'url' => '#alerts'),
                 array('label'=>'Progress bars', 'url'=>'#progress'),
+                array('label'=>'Media object', 'url'=>'#mediaobject'),
             )
         );
       ?>
@@ -54,5 +55,6 @@
 
  	include View::path("pages.components.progress");
 
+    include View::path("pages.components.mediaobject");
 ?>
 @endsection
