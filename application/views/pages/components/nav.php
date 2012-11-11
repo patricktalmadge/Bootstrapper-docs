@@ -278,7 +278,7 @@ echo Navigation::lists(
           echo Navigation::lists(
             Navigation::links(
               array(
-                array(Navigation::HEADER, 'List header'),
+                array(Navigation::HEADER, 'List header', false, false, null, 'road'),
                 array('Home', '#', true, false, null, 'home'),
                 array('Library', '#', false, false, null, 'book'),
                 array('Applications', '#', false, false, null, 'pencil'),
@@ -296,8 +296,8 @@ echo Navigation::lists(
 echo Navigation::lists(
   Navigation::links(
     array(
-      array(Navigation::HEADER, 
-        'List header'),
+      array(Navigation::HEADER, 'List header', 
+        false, false, null, 'road'),
       array('Home', '#', true, 
         false, null, 'home'),
       array('Library', '#', false, 
