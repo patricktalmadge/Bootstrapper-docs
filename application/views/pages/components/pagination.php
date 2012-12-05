@@ -12,10 +12,68 @@
       <h3>Link Function</h3>
       <p>As you can see Bootstrapper adds an extra parameter to links, the Laravel's make Paginator function.</p>
 <pre class="prettyprint linenums">
-public function links($adjacent = 3, $alignment = self::ALIGN_LEFT)
+public function links($adjacent = 3, $alignment = self::ALIGN_LEFT, $size = self::SIZE_DEFAULT)
 </pre>
     </div>
-  </div>  
+  </div> 
+  <div class="row">
+    <div class="span7">
+      <h3>Sizes</h3>
+      <p>Want larger or smaller pagination? Pass in  
+        <code>Paginator::SIZE_MINI</code>, <code>Paginator::SIZE_SMALL</code>, or <code>Paginator::SIZE_LARGE</code>.</p>
+
+<pre class="prettyprint linenums">
+$orders = DB::table('orders')->paginate(15);
+
+echo $orders->links();
+
+//Right Alignment
+echo $orders->links(3, Paginator::ALIGN_LEFT, Paginator::SIZE_LARGE);
+echo $orders->links(3);
+echo $orders->links(3, Paginator::ALIGN_LEFT, Paginator::SIZE_SMALL);
+echo $orders->links(3, Paginator::ALIGN_LEFT, Paginator::SIZE_MINI);
+</pre>
+    </div>
+    <div class="span5">
+      <h3>Size examples</h3>
+      <div class="pagination pagination-large">
+        <ul>
+            <li><a href="#">&laquo; Prev</a></li> 
+            <li><a href="#">1</a></li> 
+            <li><a href="#">2</a></li> 
+            <li><a href="#">3</a></li>
+            <li><a href="#">Next &raquo;</a></li>
+        </ul>
+      </div>
+      <div class="pagination">
+        <ul>
+            <li><a href="#">&laquo; Prev</a></li> 
+            <li><a href="#">1</a></li> 
+            <li><a href="#">2</a></li> 
+            <li><a href="#">3</a></li>
+            <li><a href="#">Next &raquo;</a></li>
+        </ul>
+      </div>
+      <div class="pagination pagination-small">
+        <ul>
+            <li><a href="#">&laquo; Prev</a></li> 
+            <li><a href="#">1</a></li> 
+            <li><a href="#">2</a></li> 
+            <li><a href="#">3</a></li>
+            <li><a href="#">Next &raquo;</a></li>
+        </ul>
+      </div>
+      <div class="pagination pagination-mini">
+        <ul>
+            <li><a href="#">&laquo; Prev</a></li> 
+            <li><a href="#">1</a></li> 
+            <li><a href="#">2</a></li> 
+            <li><a href="#">3</a></li>
+            <li><a href="#">Next &raquo;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- /row --> 
   <div class="row">
     <div class="span7">
       <h3>Flexible alignment</h3>
