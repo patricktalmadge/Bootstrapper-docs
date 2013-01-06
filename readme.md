@@ -1,6 +1,6 @@
 # Docs website for Bootstrapper
 
-http://laravelbootstrapper.phpfogapp.com]
+http://bootstrapper.aws.af.cm/
 
 
 ## Bootstrapper Github
