@@ -12,7 +12,7 @@
     <tbody>
       <tr>
         <td><?php echo Button::normal('Default'); ?></td>
-        <td><code>public static function nornaml($value, $attributes = array(), $hasDropdown = false)</code></td>
+        <td><code>public static function normal($value, $attributes = array(), $hasDropdown = false)</code></td>
       </tr>
       <tr>
         <td><?php echo Button::primary_normal('Primary'); ?></td>
