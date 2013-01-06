@@ -34,7 +34,7 @@ $body = array(
 echo Table::open();
 echo Table::headers('#', 'First Name', 'Last Name');
 echo Table::body($body); 
-echo Table::open();
+echo Table::close();
 </pre>
         </div>
     </div>
@@ -108,7 +108,7 @@ $body = array(
 echo Table::striped_bordered_hover_condensed_open();
 echo Table::headers('#', 'First Name', 'Last Name');
 echo Table::body($body); 
-echo Table::open();
+echo Table::close();
 </pre>
         </div>
     </div>
