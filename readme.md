@@ -1,7 +1,6 @@
 # Docs website for Bootstrapper
 
-http://bootstrapper.aws.af.cm/
-
+http://bootstrapper.eu1.frbit.net/
 
 ## Bootstrapper Github
 
